@@ -59,6 +59,7 @@ exports.login = async (req, res) =>{
     try {
         
         const {username, password} = req.body;
+        console.log("call" + username) 
 
         let user = await User.findOne({username}).select("+password");
 
