@@ -8,6 +8,7 @@ const cors = require("cors")
 
 
 app.use(cors())
+
 const {connectDataBase} = require('./db/conn');
 connectDataBase();
 app.use(cookiParser());
