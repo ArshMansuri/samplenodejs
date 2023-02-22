@@ -36,7 +36,6 @@ exports.signin = async (req, res) =>{
         })
 
         const token = await user.createToken();
-
         return res.status(201).cookie("token", token)
         .json({
             success: true,
